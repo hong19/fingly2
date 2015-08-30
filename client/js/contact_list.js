@@ -6,7 +6,7 @@ Template.contact_list_main.helpers({
 });
 
 Template.contact_list_main.events({
-	"submit .new-contact": function(event, template) {
+	"submit #new-contact": function(event, template) {
 		console.log("submit");
 		// Prevent default browser form submit
 		event.preventDefault();
@@ -27,6 +27,8 @@ Template.contact_list_main.events({
 		event.target.firstname.value = "";
 		event.target.lastname.value = "";
 		event.target.phone.value = "";
-
+		event.target.email.value = "";
+		event.target.birthday.value = "";
+		
 	}
 });
