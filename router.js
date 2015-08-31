@@ -6,6 +6,6 @@ Router.configure({
 });
 
 Router.route('/', function(){
-	this.render("header", { to: 'header'} );
-	this.render("contact_list_main", { to: 'main_region' });
+	this.render("Header", { to: 'header'} );
+	this.render("ContactListMain", { to: 'main_region' });
 });

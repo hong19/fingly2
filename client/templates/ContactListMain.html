@@ -1,0 +1,43 @@
+<template name="ContactListMain">
+	<div class="container-fluid">
+		<!-- for operation bar -->
+		<div class="row">
+			
+		</div>
+		<!-- for contact list -->
+		<div class="row">
+			<form id="new_contact_form">
+			</form>
+			<form id="edit_contact_form">
+			</form>
+			<table class="table table-striped table-hover">	
+				<thead>
+					<tr>
+						<th>Firstname</th>
+						<th>Lastname</th>
+						<th>Phone</th>
+						<th>Email</th>
+						<th>Birthday</th>
+						<th>Operation</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+						<tr>
+							<td><input type="text" name="firstname" placeholder="firstname" form="new_contact_form"></td>
+							<td><input type="text" name="lastname" placeholder="lastname" form="new_contact_form"></td>
+							<td><input type="text" name="phone" placeholder="phone" form="new_contact_form"></td>
+							<td><input type="text" name="email" placeholder="email" form="new_contact_form"></td>
+							<td><input type="text" name="birthday" placeholder="birthday" form="new_contact_form">	</td>
+							<td><input class="btn btn-success" type="submit" value="Add Contact" form="new_contact_form"></td>
+						</tr>
+					
+					{{#each contacts}}
+						{{> Contact}}
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</template>
+
