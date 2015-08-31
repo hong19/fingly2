@@ -1,0 +1,32 @@
+
+<template name="Contact">
+	<tr>
+		<td>{{ firstname }}</td>
+		<td>{{ lastname }}</td>
+		<td>{{ phone }}</td>
+		<td>{{ email }}</td>
+		<td>{{ birthday }}</td>
+		<td>
+			<button class="btn btn-primary btn-edit">
+				<i class="fa fa-pencil-square-o"></i>
+			</button>
+			<button class="btn btn-danger btn-delete">
+				<i class="fa fa-trash-o"></i>
+			</button>
+		</td>
+	</tr>
+	{{#if edit_mode}}
+		{{> EditContactForm }}
+	{{/if}}
+</template>
+
+<template name="EditContactForm">
+	<tr>
+		<td><input type="text" name="firstname" placeholder="firstname" form="edit_contact_form" value={{ firstname }}></td>
+		<td><input type="text" name="lastname" placeholder="lastname" form="edit_contact_form" value={{ lastname }}></td>
+		<td><input type="text" name="phone" placeholder="phone" form="edit_contact_form" value={{ phone }}></td>
+		<td><input type="text" name="email" placeholder="email" form="edit_contact_form" value={{ email }}></td>
+		<td><input type="text" name="birthday" placeholder="birthday" form="edit_contact_form" value={{ birthday }}>	</td>
+		<td><input class="btn btn-success" type="submit" value="Update" form="edit_contact_form"></td>
+	</tr>
+</template>
