@@ -51,9 +51,6 @@ Template.contact_list_main.events({
 
 Template.contact.events({
 	"click .btn-success": function(event){
-		console.log("submit edit_contact_form");
-		console.log( this );
-		console.log( event.target );
 		// Prevent default browser form submit
 		event.preventDefault();
 
