@@ -3,6 +3,8 @@
 		<h1>Contact Details</h1>
 	</div>
 	<div class="row">
+		<form id="edit_contact_form">
+		</form>
 		<table class="table table-striped table-hover">	
 			<thead>
 				<tr>
@@ -13,7 +15,11 @@
 			<tbody>
 				<tr>
 					<td>First Name</td>
-					<td>{{ firstname }}</td>
+					{{#if edit_mode}}
+						<td><input type="text" name="firstname" placeholder="firstname" form="edit_contact_form" value={{firstname}}></td>
+					{{else}}
+						<td>{{ firstname }}</td>
+					{{/if}}
 				</tr>
 				<tr>
 					<td>Last Name</td>
@@ -51,7 +57,14 @@
 					<td>Wechat</td>
 					<td>{{ wechat }}</td>
 				</tr>
-
+				<tr>
+					<td></td>
+					<td>
+						<button class="btn btn-primary btn-edit">
+							<i class="fa fa-pencil-square-o"></i>
+						</button>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
