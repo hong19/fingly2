@@ -1,0 +1,21 @@
+<template name="SingleContactMain">
+<h1>single contact page</h1>
+<table class="table table-striped table-hover">	
+	<thead>
+		<tr>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>Birthday</th>
+			<th>Operation</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#with contact_data}}
+			{{> Contact }}
+		{{/with}}
+	</tbody>
+</table>
+
+</template>
