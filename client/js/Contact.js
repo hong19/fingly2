@@ -1,3 +1,9 @@
+Template.Contact.helpers({
+	detail_url: function(){
+		return "/single-contact/" + this._id; 
+	}
+});
+
 
 Template.Contact.events({
 	"click .btn-success": function(event){
@@ -16,5 +22,5 @@ Template.Contact.events({
 				edit_mode: false
 			} 
 		});
-	}
+	},
 });

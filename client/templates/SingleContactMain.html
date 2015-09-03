@@ -1,0 +1,18 @@
+<template name="SingleContactMain">
+	<div class="container-fluid"> 
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="contact-details-main">
+					{{#with contact_data}}
+						{{> ContactDetailsMain }}		
+					{{/with}}
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="timeline-main">
+					{{> TimelineMain }}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
