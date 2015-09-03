@@ -41,6 +41,7 @@ Template.ContactListMain.events({
 		});
 	},
 
+		
 	"click .btn-delete": function(){
 		// _id is the identifier of object in mongoDB
 		Contacts.remove( this._id )
